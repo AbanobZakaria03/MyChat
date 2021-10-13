@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="4dp"
+    android:layout_height="wrap_content">
+
+
+
+    <me.jagar.chatvoiceplayerlibrary.VoicePlayerView
+        android:id="@+id/voicePlayerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:enableVisualizer="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:playPauseBackgroundColor="#ff7700"
+        app:playPauseCornerRadius="100"
+        app:playProgressbarColor="#ff7700"
+        app:progressTimeColor="#FFFFFF"
+        app:seekBarProgressColor="#FFFFFF"
+        app:seekBarThumbColor="#ff7700"
+        app:shareBackgroundColor="#ff7700"
+        app:shareCornerRadius="100"
+        app:showShareButton="true"
+        app:showTiming="true"
+        app:timingBackgroundColor="#2C2B28"
+        app:viewBackground="#2C2B28"
+        app:viewCornerRadius="100"
+        app:visualizationNotPlayedColor="#727171"
+        app:visualizationPlayedColor="#ff7700" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginRight="5dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="@+id/voicePlayerView"
+        app:layout_constraintEnd_toEndOf="@+id/voicePlayerView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_seen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="seen"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/show_message"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/show_message"
+        app:layout_constraintTop_toBottomOf="@id/voicePlayerView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
